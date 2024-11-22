@@ -1,3 +1,5 @@
+//Home
+
 import Botao from '../components/Botao/botao';
 import Menu from '../components/Menu/menu';
 import Texto from '../components/Texto/texto';
