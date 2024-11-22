@@ -75,7 +75,8 @@ const Message = styled.p`
 
 const Login = () => {
   const [nome, setNome] = useState('');
-  const [dataNascimento, setDataNascimento] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -84,7 +85,7 @@ const Login = () => {
     const response = await fetch('/api/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nome, dataNascimento }),
+      body: JSON.stringify({ nome, email, senha }),
     });
 
     const data = await response.json();
@@ -92,7 +93,8 @@ const Login = () => {
 
     if (response.ok) {
       setNome('');
-      setDataNascimento('');
+      setEmail('');
+      setSenha('');
     }
   };
 
@@ -111,12 +113,22 @@ const Login = () => {
           />
         </FormGroup>
         <FormGroup>
-          <Label htmlFor="dataNascimento">Data de Nascimento</Label>
+          <Label htmlFor="email">Email</Label>
           <Input
-            type="date"
-            id="dataNascimento"
-            value={dataNascimento}
-            onChange={(e) => setDataNascimento(e.target.value)}
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="senha">Senha</Label>
+          <Input
+            type="password"
+            id="senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
             required
           />
         </FormGroup>
