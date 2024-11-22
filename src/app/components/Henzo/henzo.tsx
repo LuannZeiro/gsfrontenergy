@@ -36,10 +36,10 @@ const ButtonContainer = styled.div`
   margin-top: 20px;
 `;
 
-const Button = styled.a`
+const Button = styled.a<{ bgColor: string }>`
   text-decoration: none;
   color: white;
-  background-color: ${(props: { bgColor: string }) => props.bgColor};
+  background-color: ${(props) => props.bgColor};
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
@@ -47,8 +47,8 @@ const Button = styled.a`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${(props: { bgColor: string }) =>
-      props.bgColor === '#333' ? '#555' : '#005582'};
+    background-color: ${(props) =>
+    props.bgColor === '#333' ? '#555' : '#005582'};
   }
 `;
 
