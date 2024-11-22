@@ -1,0 +1,17 @@
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100px;          
+  }
+  
+
+  .botao button {
+    font-weight: bold;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
