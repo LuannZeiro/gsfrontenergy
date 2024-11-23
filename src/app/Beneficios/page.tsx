@@ -1,3 +1,5 @@
+//beneficio
+
 import Beneficio1 from '../components/Beneficio1/beneficio1';
 import Beneficio2 from '../components/Beneficio2/beneficio2';
 import Beneficio3 from '../components/Beneficio3/beneficio3';
